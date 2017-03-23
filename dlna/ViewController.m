@@ -10,6 +10,7 @@
 #import "ZM_DMRControl.h"
 #import "ZM_SingletonControlModel.h"
 #import <WebKit/WebKit.h>
+#import "DetailViewController.h"
 
 @interface ViewController()<ZM_DMRProtocolDelegate, WebPolicyDelegate, WebFrameLoadDelegate>
 
@@ -89,6 +90,28 @@
     }
 }
 
+- (IBAction)goToDetailVc:(id)sender {
+    
+    //这里是js，主要目的实现对url的获取
+    static  NSString * const jsGetImages =
+    @"function getUrls(){\
+    var objs = document.getElementsByTagName(\"a\");\
+    var imgScr = '';\
+    for(var i=0;i<objs.length;i++){\
+    imgScr = imgScr + objs[i].href + '+';\
+    };\
+    return imgScr;\
+    };";
+    
+    [self.webview stringByEvaluatingJavaScriptFromString:jsGetImages];//注入js方法
+    NSString *urlResurlt = [self.webview stringByEvaluatingJavaScriptFromString:@"getUrls()"];
+    self.mUrlArray = [NSMutableArray arrayWithArray:[urlResurlt componentsSeparatedByString:@"+"]];
+    
+    DetailViewController *vc = [[DetailViewController alloc] init];
+    vc.videoList = self.mUrlArray;
+    [self presentViewControllerAsModalWindow:vc];
+    
+}
 
 #pragma mark - ZM_DMRProtocolDelegate
 - (void)onDMRAdded {

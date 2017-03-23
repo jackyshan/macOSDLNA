@@ -240,6 +240,15 @@
     controller->setRendererAVTransportURI([uriStr UTF8String], [didl UTF8String]);
 }
 
+/**
+ 设置Next播放URI
+ 
+ @param uriStr URI
+ */
+-(void)renderSetNextAVTransportWithURI:(NSString *)uriStr {
+    controller->setRendererNextAVTransportURI([uriStr UTF8String]);
+}
+
 
 /**
  设置音量

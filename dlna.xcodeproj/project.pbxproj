@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6D3A12621E8360B20007D7EE /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D3A12601E8360B20007D7EE /* DetailViewController.m */; };
+		6D3A12631E8360B20007D7EE /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6D3A12611E8360B20007D7EE /* DetailViewController.xib */; };
 		6D6A34F51E7E386000E1DB0D /* Neptune.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D9BC0DC1E7E382F00DEAFC7 /* Neptune.framework */; };
 		6D6A34F61E7E386000E1DB0D /* Neptune.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6D9BC0DC1E7E382F00DEAFC7 /* Neptune.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		6D6A34F71E7E386000E1DB0D /* Platinum.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D9BC0DD1E7E382F00DEAFC7 /* Platinum.framework */; };
@@ -42,6 +44,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		6D3A125F1E8360B20007D7EE /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		6D3A12601E8360B20007D7EE /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		6D3A12611E8360B20007D7EE /* DetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailViewController.xib; sourceTree = "<group>"; };
 		6D6A35001E7EAA1E00E1DB0D /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		6D9BC0DC1E7E382F00DEAFC7 /* Neptune.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Neptune.framework; sourceTree = "<group>"; };
 		6D9BC0DD1E7E382F00DEAFC7 /* Platinum.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Platinum.framework; sourceTree = "<group>"; };
@@ -133,6 +138,9 @@
 				6DE69F811E7E227700D1F9D6 /* AppDelegate.m */,
 				6DE69F861E7E227700D1F9D6 /* ViewController.h */,
 				6DE69F871E7E227700D1F9D6 /* ViewController.m */,
+				6D3A125F1E8360B20007D7EE /* DetailViewController.h */,
+				6D3A12601E8360B20007D7EE /* DetailViewController.m */,
+				6D3A12611E8360B20007D7EE /* DetailViewController.xib */,
 				6DE69F891E7E227700D1F9D6 /* Assets.xcassets */,
 				6DE69F8B1E7E227700D1F9D6 /* Main.storyboard */,
 				6DE69F8E1E7E227700D1F9D6 /* Info.plist */,
@@ -198,7 +206,7 @@
 				TargetAttributes = {
 					6DE69F7C1E7E227700D1F9D6 = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = 2KH8YLD56W;
+						DevelopmentTeam = BV43H44J6B;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -227,6 +235,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6DE69F8A1E7E227700D1F9D6 /* Assets.xcassets in Resources */,
+				6D3A12631E8360B20007D7EE /* DetailViewController.xib in Resources */,
 				6DE69F8D1E7E227700D1F9D6 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -240,6 +249,7 @@
 			files = (
 				6DE69FA81E7E238500D1F9D6 /* PltMicroMediaController.mm in Sources */,
 				6DE69F881E7E227700D1F9D6 /* ViewController.m in Sources */,
+				6D3A12621E8360B20007D7EE /* DetailViewController.m in Sources */,
 				6DE69FAA1E7E238500D1F9D6 /* ZM_DMRControl.mm in Sources */,
 				6DE69F851E7E227700D1F9D6 /* main.m in Sources */,
 				6DE69FAD1E7E238500D1F9D6 /* ZM_SingletonControlModel.mm in Sources */,
@@ -356,7 +366,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = 2KH8YLD56W;
+				DEVELOPMENT_TEAM = BV43H44J6B;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/dlna",
@@ -374,7 +384,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = 2KH8YLD56W;
+				DEVELOPMENT_TEAM = BV43H44J6B;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/dlna",

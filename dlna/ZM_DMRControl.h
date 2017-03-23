@@ -177,6 +177,12 @@
  */
 -(void)renderSetAVTransportWithURI:(NSString *)uriStr metaData:(NSString *)didl;
 
+/**
+ 设置Next播放URI
+ 
+ @param uriStr URI
+ */
+-(void)renderSetNextAVTransportWithURI:(NSString *)uriStr;
 
 /**
  设置音量
