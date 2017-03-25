@@ -8,6 +8,7 @@
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="DetailViewController">
             <connections>
+                <outlet property="currentPlayLabel" destination="uSy-t2-wdY" id="r0W-3K-BLG"/>
                 <outlet property="tableView" destination="sef-oT-yWO" id="X0Z-3g-rU1"/>
                 <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
             </connections>
@@ -90,10 +91,20 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </tableHeaderView>
                 </scrollView>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uSy-t2-wdY">
+                    <rect key="frame" x="221" y="255" width="37" height="17"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Label" id="9Vq-bw-5OW">
+                        <font key="font" metaFont="system"/>
+                        <color key="textColor" red="0.98431372549999996" green="0.050980392159999999" blue="0.023529411760000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
             </subviews>
             <constraints>
+                <constraint firstItem="uSy-t2-wdY" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" id="1uB-Hs-gXw"/>
                 <constraint firstItem="WMg-m2-ukh" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" id="3ZK-Ns-K0p"/>
                 <constraint firstAttribute="trailing" secondItem="WMg-m2-ukh" secondAttribute="trailing" id="Ryf-Zt-OHw"/>
+                <constraint firstItem="uSy-t2-wdY" firstAttribute="centerX" secondItem="Hz6-mo-xeY" secondAttribute="centerX" id="npN-3f-kVE"/>
                 <constraint firstAttribute="bottom" secondItem="WMg-m2-ukh" secondAttribute="bottom" id="tTx-YY-I3S"/>
                 <constraint firstItem="WMg-m2-ukh" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" id="yVG-Gq-CfO"/>
             </constraints>

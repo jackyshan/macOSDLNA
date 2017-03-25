@@ -11,6 +11,7 @@
 #import "ZM_SingletonControlModel.h"
 #import <WebKit/WebKit.h>
 #import "DetailViewController.h"
+#import "IPAdress.h"
 
 @interface ViewController()<ZM_DMRProtocolDelegate, WebPolicyDelegate, WebFrameLoadDelegate>
 
@@ -34,8 +35,18 @@
     if (![[[ZM_SingletonControlModel sharedInstance] DMRControl] isRunning]) {
         [[[ZM_SingletonControlModel sharedInstance] DMRControl] start];
     }
-    
-    NSString *url = @"http://192.168.1.106";
+/**
+ {
+ "awdl0/ipv6" = "fe80::28b5:23ff:fe08:103e";
+ "en1/ipv4" = "192.168.1.105";
+ "en1/ipv6" = "fe80::140c:72d9:811c:3e73";
+ "lo0/ipv4" = "127.0.0.1";
+ "lo0/ipv6" = "fe80::1";
+ "utun0/ipv6" = "fe80::e87e:b7b4:20b2:3a44";
+ }
+ */
+    NSDictionary *ipdic = [IPAdress getIPAddresses];
+    NSString *url = [NSString stringWithFormat:@"http://%@", ipdic[@"en1/ipv4"]];
     [self.webview.mainFrame loadRequest:[[NSURLRequest alloc] initWithURL:[NSURL URLWithString:url]]];
     self.webview.policyDelegate = self;
     self.webview.frameLoadDelegate = self;
@@ -134,6 +145,11 @@
     self.title = [NSString stringWithFormat:@"已连接盒子%@", [devices[0] name]];
     
     NSLog(@"连接设备设备名%@，设备地址%@", model.name, model.descriptionURL);
+    
+    // 创建NSTimer对象
+    NSTimer *timer = [NSTimer timerWithTimeInterval:3 target:[[ZM_SingletonControlModel sharedInstance] DMRControl] selector:@selector(getTransportInfo) userInfo:nil repeats:YES];
+    // 加入RunLoop中
+    [[NSRunLoop mainRunLoop] addTimer:timer forMode:NSRunLoopCommonModes];
 }
 
 /**
@@ -155,6 +171,16 @@
 {
     NSLog(@"cur_transport_state:%@--cur_transport_status:%@--:%@",response.cur_transport_state,response.cur_transport_status,response.cur_speed);
     [[[ZM_SingletonControlModel sharedInstance] DMRControl] getCurrentTransportAction];
+    
+    if ([response.cur_transport_state isEqualToString:@"STOPPED"]) {
+        if (self.presentedViewControllers.count == 0) {
+            [self nextHandle:nil];
+        }
+        else {
+            [[NSNotificationCenter defaultCenter] postNotificationName:@"playNext" object:nil];
+        }
+        
+    }
 }
 
 -(void)previousResponse:(ZM_EventResultResponse *)response

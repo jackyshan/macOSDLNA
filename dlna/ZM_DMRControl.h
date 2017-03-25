@@ -183,7 +183,7 @@
  @param uriStr URI
  */
 -(void)renderSetNextAVTransportWithURI:(NSString *)uriStr;
-
+- (BOOL)canRendererSetNextURI;
 /**
  设置音量
 

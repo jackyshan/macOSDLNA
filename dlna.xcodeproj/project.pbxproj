@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6D0B28B31E8615280090EE3A /* IPAdress.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D0B28B21E8615280090EE3A /* IPAdress.m */; };
 		6D3A12621E8360B20007D7EE /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D3A12601E8360B20007D7EE /* DetailViewController.m */; };
 		6D3A12631E8360B20007D7EE /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6D3A12611E8360B20007D7EE /* DetailViewController.xib */; };
 		6D6A34F51E7E386000E1DB0D /* Neptune.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D9BC0DC1E7E382F00DEAFC7 /* Neptune.framework */; };
@@ -44,6 +45,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		6D0B28B11E8615280090EE3A /* IPAdress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IPAdress.h; sourceTree = "<group>"; };
+		6D0B28B21E8615280090EE3A /* IPAdress.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IPAdress.m; sourceTree = "<group>"; };
 		6D3A125F1E8360B20007D7EE /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
 		6D3A12601E8360B20007D7EE /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 		6D3A12611E8360B20007D7EE /* DetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailViewController.xib; sourceTree = "<group>"; };
@@ -141,6 +144,8 @@
 				6D3A125F1E8360B20007D7EE /* DetailViewController.h */,
 				6D3A12601E8360B20007D7EE /* DetailViewController.m */,
 				6D3A12611E8360B20007D7EE /* DetailViewController.xib */,
+				6D0B28B11E8615280090EE3A /* IPAdress.h */,
+				6D0B28B21E8615280090EE3A /* IPAdress.m */,
 				6DE69F891E7E227700D1F9D6 /* Assets.xcassets */,
 				6DE69F8B1E7E227700D1F9D6 /* Main.storyboard */,
 				6DE69F8E1E7E227700D1F9D6 /* Info.plist */,
@@ -206,7 +211,7 @@
 				TargetAttributes = {
 					6DE69F7C1E7E227700D1F9D6 = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = BV43H44J6B;
+						DevelopmentTeam = Y784V27DDW;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -253,6 +258,7 @@
 				6DE69FAA1E7E238500D1F9D6 /* ZM_DMRControl.mm in Sources */,
 				6DE69F851E7E227700D1F9D6 /* main.m in Sources */,
 				6DE69FAD1E7E238500D1F9D6 /* ZM_SingletonControlModel.mm in Sources */,
+				6D0B28B31E8615280090EE3A /* IPAdress.m in Sources */,
 				6DE69FA91E7E238500D1F9D6 /* ZM_DeviceInfoModel.m in Sources */,
 				6DE69FAB1E7E238500D1F9D6 /* ZM_EventParamsResponse.m in Sources */,
 				6DE69F821E7E227700D1F9D6 /* AppDelegate.m in Sources */,
@@ -366,7 +372,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = BV43H44J6B;
+				DEVELOPMENT_TEAM = Y784V27DDW;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/dlna",
@@ -384,7 +390,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = BV43H44J6B;
+				DEVELOPMENT_TEAM = Y784V27DDW;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/dlna",

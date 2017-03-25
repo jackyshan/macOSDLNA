@@ -249,6 +249,9 @@
     controller->setRendererNextAVTransportURI([uriStr UTF8String]);
 }
 
+- (BOOL)canRendererSetNextURI {
+    return controller->canRendererSetNextURI();
+}
 
 /**
  设置音量
