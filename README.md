@@ -2,7 +2,7 @@
 
 DLNA的全称是DIGITAL LIVING NETWORK ALLIANCE(数字生活网络联盟)， 其宗旨是Enjoy your music, photos and videos, anywhere anytime， DLNA(Digital Living Network Alliance) 由索尼、英特尔、微软等发起成立、旨在解决个人PC，消费电器，移动设备在内的无线网络和有线网络的互联互通，使得数字媒体和内容服务的无限制的共享和增长成为可能，目前成员公司已达280多家。
 
-###1、使用第三方库Neptune和Platinum
+### 1、使用第三方库Neptune和Platinum
 下载Platinum工程，carthage update安装，打开universal-apple-macosx工程编译生成Platinum.framework和Neptune.framework
 
 Neptune : a C++ Runtime Library
@@ -10,7 +10,7 @@ https://github.com/plutinosoft/Platinum
 Platinum: a modular UPnP Framework [Platinum depends on Neptune]
 https://github.com/plutinosoft/Neptune
 
-###2、对Platinum库进行封装实现DLNA扫描连接等功能
+### 2、对Platinum库进行封装实现DLNA扫描连接等功能
 
 开启代理，启动搜索
 
@@ -52,7 +52,7 @@ https://github.com/plutinosoft/Neptune
             [[[ZM_SingletonControlModel sharedInstance] DMRControl] renderPlay];
         }
 
-###3、实现播放webview视频连接功能
+### 3、实现播放webview视频连接功能
 
     #pragma mark - WebPolicyDelegate
     //获取每次加载页面的request
